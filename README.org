@@ -1,0 +1,10 @@
+#+TITLE: powerline-iconic-theme
+#+DATE: Sunday, Dec 27 2015
+#+STARTUP: content
+
+*TESTING: MAY NOT WORK YET!*
+
+Uncluttered *powerline-theme* with more icons and less text.
+
+#+ATTR_HTML: title="screenshot"
+[[https://raw.github.com/rhoit/powerline-iconic-theme/screenshot01.png]]
