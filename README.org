@@ -7,4 +7,4 @@
 Uncluttered *powerline-theme* with more icons and less text.
 
 #+ATTR_HTML: title="screenshot"
-[[https://raw.github.com/rhoit/powerline-iconic-theme/screenshot01.png]]
+[[https://raw.githubusercontent.com/rhoit/powerline-iconic-theme/dump/screenshot01.png]]
