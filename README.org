@@ -2,7 +2,7 @@
 #+DATE: Sunday, Dec 27 2015
 #+STARTUP: content
 
-*TESTING: MAY NOT WORK YET!*
+*TESTING: INCOMPLETE!*
 
 Uncluttered *powerline-theme* with more icons and less text.
 
