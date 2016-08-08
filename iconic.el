@@ -10,6 +10,7 @@
 
 (require 'powerline)
 (require 'mode-icons)
+;; (require 'window-numbering)
 
 (mode-icons-mode)
 (setq powerline-default-separator 'wave)
@@ -56,6 +57,19 @@
                     (vc-working-revision (buffer-file-name (current-buffer)) backend))))))
     face pad)))
 
+(defun powerline-iconic-theme-unicode-number (str)
+  "Return a nice unicode representation of a single-digit number STR."
+  (cond
+   ((string= "1" str) "➊")
+   ((string= "2" str) "➋")
+   ((string= "3" str) "➌")
+   ((string= "4" str) "➍")
+   ((string= "5" str) "➎")
+   ((string= "6" str) "❻")
+   ((string= "7" str) "➐")
+   ((string= "8" str) "➑")
+   ((string= "9" str) "➒")
+   ((string= "0" str) "➓")))
 
 (setq which-func-format
       `(" "
@@ -80,7 +94,8 @@ mouse-3: go to end")
   (interactive)
   (setq-default
    mode-line-format
-   '("%e"
+   '(" %e"
+
      mode-line-modified
      (:eval
       (let* ((active (powerline-selected-window-active))
@@ -132,7 +147,13 @@ mouse-3: go to end")
                         (powerline-raw " " nil)
                         (powerline-zigzag-left nil face1)
                         (powerline-raw "%3c," face1 'r)
+                        ;; (string-match "\\`[1-9][0-9]*\\'" mode-line-position)
+                        ;; (replace-regexp-in-string "[^a-z]" "&%"
+                        ;;                           (powerline-raw mode-line-position face1 'r))
                         (powerline-raw mode-line-position face1 'r)
+                        ;; (if (string-match "\\`[0-9]\\'" (powerline-raw mode-line-position))
+                        ;;     ;; # FIX the movement
+                        ;;     (powerline-raw "% " face1))
                         (powerline-zigzag-right face1 nil)
                         (powerline-raw "  " nil)
                         )))
@@ -141,3 +162,5 @@ mouse-3: go to end")
                 (powerline-fill nil (powerline-width rhs))
                 (powerline-render rhs))
         )))))
+
+(provide 'powerline-iconic-theme)
